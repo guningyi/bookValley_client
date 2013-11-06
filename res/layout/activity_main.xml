@@ -92,6 +92,14 @@
         android:textSize="20sp"
         android:textColor="#cc1100"
      />
+     
+     <Button android:id="@+id/gotoMyBookShelf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="书架"
+        android:textSize="20sp"
+        android:textColor="#cc1100"
+         />
    </LinearLayout>
    </ScrollView>   
      

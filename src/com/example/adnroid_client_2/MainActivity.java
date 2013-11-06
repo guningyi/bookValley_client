@@ -34,10 +34,12 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Activity;
+import android.content.Intent;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -92,6 +94,17 @@ public class MainActivity extends Activity {
 		download.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View view) {
 	        	new Download().execute();
+	          
+	            }
+	    });
+		
+		Button gotoMyBookShelf = (Button) findViewById(R.id.gotoMyBookShelf);
+		gotoMyBookShelf.setOnClickListener(new View.OnClickListener() {
+	        public void onClick(View view) {
+	        	Intent intent = new Intent();
+				intent.setClass(MainActivity.this, BookShelfActivity.class);
+				startActivity(intent);
+				finish();
 	          
 	            }
 	    });
