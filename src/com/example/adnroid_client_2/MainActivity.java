@@ -483,7 +483,7 @@ public class MainActivity extends Activity {
 		            byte[] bypes = params.toString().getBytes();
 		            httpurlconnection.getOutputStream().write(bypes);// 输入参数
 
-		    	    
+		    	    //add some comments  
 		            //被注释掉的代码是提交单个参数的方式
 		    	    //String bookName="downloadBookName="+downloadBookName;
 		    	    //httpurlconnection.getOutputStream().write(bookName.getBytes());
