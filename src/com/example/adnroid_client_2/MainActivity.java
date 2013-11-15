@@ -5,6 +5,7 @@ package com.example.adnroid_client_2;
 
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -458,6 +459,8 @@ public class MainActivity extends Activity {
 		  InputStream input=null;//用于接收Server传来的数据  
 		  String SDPATH = Environment.getExternalStorageDirectory() + "/myDownloadBook/";
 		  OutputStream output = null; 
+		  ByteArrayOutputStream  baos = new ByteArrayOutputStream();
+		  int i = -1; 
 		  
 		  protected String doInBackground(String... args) {
 			     
@@ -525,10 +528,26 @@ public class MainActivity extends Activity {
 		                }  
 		                output.flush();  
 		    	    }
+		    	    else if (code == 201)
+		    	    {
+		    	    	//getResponseMessage是返回header里附带的消息
+		    	    	//result=httpurlconnection.getResponseMessage();
+		    	    	
+		    	    	try{
+		    	    	    input = httpurlconnection.getInputStream(); 
+		    	        }catch (MalformedURLException e) {  
+		                    e.printStackTrace();  
+		                }
+		    	    	while((i = input.read())!=-1){ 
+		    	            baos.write(i); 
+		    	        }
+		    	    	result = baos.toString();
+		    	    	
+		    	    }
 		    	    //System.out.println("code   " + code);
 		    	    httpurlconnection.getOutputStream().flush();
 		    	    httpurlconnection.getOutputStream().close();
-		    	    result = "code"+code;
+		    	    //result = "code"+code;
 		    	    
 	    			 
 	    		}catch(ClientProtocolException e)
