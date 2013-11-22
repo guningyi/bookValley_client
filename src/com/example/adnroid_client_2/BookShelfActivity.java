@@ -16,6 +16,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,10 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class BookShelfActivity extends Activity {
 	private GridView bookShelf;
+	private Thread mThread;
+	private String[] name;
+	private static final int MSG_SUCCESS = 0;
+	private static final int MSG_FAILURE = 1;
 	//private HttpUtility httpUtility;
 	   private int[] data = {
 				R.drawable.cover_txt,R.drawable.cover_txt,R.drawable.cover_txt,R.drawable.cover_txt,R.drawable.cover_txt,
@@ -47,9 +53,10 @@ public class BookShelfActivity extends Activity {
 				R.drawable.cover_txt,R.drawable.cover_txt,R.drawable.cover_txt,R.drawable.cover_txt
 				
 		};
-    HttpUtility httpUtility = new HttpUtility();
-	private String[] name= httpUtility.list_book("guningyi");
+    //HttpUtility httpUtility = new HttpUtility();
+	//private String[] name= httpUtility.list_book("guningyi");
 	
+
 	private GridView gv;  
     private SlidingDrawer sd;  
     private Button iv;  
@@ -61,6 +68,14 @@ public class BookShelfActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        
+    	//call the thread and handler   
+    	if (mThread == null)
+    	{
+    		mThread = new Thread(runnable);
+    		mThread.start();
+    	}
+    	   
         
         bookShelf = (GridView) findViewById(R.id.bookShelf);
         ShlefAdapter adapter=new ShlefAdapter();
@@ -220,5 +235,34 @@ public class BookShelfActivity extends Activity {
         }  
   
     }  
+
+
+    Handler  mHandler = new Handler()
+    {
+    	@Override
+    	public void handleMessage(Message msg) {
+    		switch(msg.what){
+    		    case MSG_SUCCESS:
+    		    	name = (String[]) msg.obj;
+    			    break;
+    			default:
+    				
+    		}
+    			
+    	}
+    	
+    };
+    
+    Runnable runnable = new Runnable()
+    {
+    	@Override
+    	public void run()
+    	{
+    		 HttpUtility httpUtility = new HttpUtility();
+    		 String[] nameTmp= httpUtility.list_book("guningyi");
+    		 mHandler.obtainMessage(MSG_SUCCESS, nameTmp).sendToTarget();
+    	}
+    };
+    
 
 }
