@@ -25,17 +25,18 @@ public final class R {
         public static final int back_right=0x7f020001;
         public static final int bookshelf_layer_center=0x7f020002;
         public static final int border=0x7f020003;
-        public static final int btn_local=0x7f020004;
-        public static final int cartoon_folder=0x7f020005;
-        public static final int cartoon_txt=0x7f020006;
-        public static final int cover_txt=0x7f020007;
-        public static final int file_list_bg=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int icon=0x7f02000a;
-        public static final int shelves_editbook=0x7f02000b;
-        public static final int shelves_editbook_d=0x7f02000c;
-        public static final int style07=0x7f02000d;
-        public static final int titlebar_big=0x7f02000e;
+        public static final int border_gainsboro=0x7f020004;
+        public static final int btn_local=0x7f020005;
+        public static final int cartoon_folder=0x7f020006;
+        public static final int cartoon_txt=0x7f020007;
+        public static final int cover_txt=0x7f020008;
+        public static final int file_list_bg=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int icon=0x7f02000b;
+        public static final int shelves_editbook=0x7f02000c;
+        public static final int shelves_editbook_d=0x7f02000d;
+        public static final int style07=0x7f02000e;
+        public static final int titlebar_big=0x7f02000f;
     }
     public static final class id {
         public static final int action_settings=0x7f080025;
