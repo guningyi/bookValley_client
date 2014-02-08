@@ -3,7 +3,20 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+    <!-- 用ScrollView去包住大的分类 -->
+    <ScrollView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+    <!-- ScrollView只能包含一个直接的子节点，所以要在这里套一层 -->
+    <LinearLayout
+                android:id="@+id/layout"
+                android:orientation="vertical"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip">
+    <!-- 大分类的标题：  热书分类 -->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -21,7 +34,272 @@
             android:text="热书分类" />
     </LinearLayout>
     
+    <!-- 热书分类主linearLayout -->
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:padding="3dip"
+        android:gravity="center">
+        
+    <!-- 水平分割线 -->    
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+    <!-- 热书分类第一行 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <!-- 热书分类第一行第一列 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chuanyue"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="穿越风云" />
+
+ 
+         <!-- 热书分类第一行第二列 -->
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+
+    	 android:background="?android:attr/listDivider"
+		/>  
+        
+         <!-- 热书分类第一行第三列 -->
+        <TextView
+            android:id="@+id/xiuzhen"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="修真传奇" />
+         <!-- 热书分类第一行第四列 -->
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+
+    	 android:background="?android:attr/listDivider"
+		/>  
+		 <!-- 热书分类第一行第五列 -->
+        <TextView
+            android:id="@+id/wuxia"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="武侠江湖" />
+        
+    </LinearLayout>
+    
+    <!-- 热书分类第一行与第二行之间的分隔线 -->
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+    
+    <!-- 热书分类第二行 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chengren"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="成人文学" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/lishi"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="历史战争" />
+        
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+        <TextView
+            android:id="@+id/zhichang"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="职场励志" />
+        
+    </LinearLayout>
+    
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+  
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/xiaoyuan"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="校园青春" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/ouxiang"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="女生偶像" />
+        
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+        <TextView
+            android:id="@+id/dushi"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="2dip"
+            android:text="都市浪漫" />
+        
+    </LinearLayout>
+      <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+     </LinearLayout>
+     
+    
+    
+    <!-- 大分类的标题：  全本小说 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dip"
+        android:padding="3dip"
+        android:gravity="center">
+        
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookClassifyTitle"
+            android:layout_margin="3dip"
+            android:padding="2dip"
+            android:text="全本小说" />
+    </LinearLayout>
+    
+        <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -258,4 +536,266 @@
 		/>  
 		
      </LinearLayout>
+    
+    
+        
+    <!-- 大分类的标题：  出版精华 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dip"
+        android:padding="3dip"
+        android:gravity="center">
+        
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookClassifyTitle"
+            android:layout_margin="3dip"
+            android:padding="2dip"
+            android:text="出版精华" />
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border"
+        android:padding="3dip"
+        android:gravity="center">
+        
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chuanyue"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="穿越风云" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/xiuzhen"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="修真传奇" />
+        
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+        <TextView
+            android:id="@+id/wuxia"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="武侠江湖" />
+        
+    </LinearLayout>
+    
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chengren"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="成人文学" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/lishi"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="历史战争" />
+        
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+        <TextView
+            android:id="@+id/zhichang"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="职场励志" />
+        
+    </LinearLayout>
+    
+    <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+  
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/xiaoyuan"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="校园青春" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/ouxiang"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:layout_weight="2"
+            android:text="女生偶像" />
+        
+          <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="15dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+        <TextView
+            android:id="@+id/dushi"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="2dip"
+            android:text="都市浪漫" />
+        
+    </LinearLayout>
+      <View  
+    	 android:orientation="horizontal"
+    	 android:layout_width="fill_parent"  
+   		 android:layout_height="0.5dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+		
+     </LinearLayout>
+     
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
