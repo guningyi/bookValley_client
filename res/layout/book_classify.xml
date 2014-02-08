@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#D3D3D3" >
     <!-- 用ScrollView去包住大的分类 -->
     <ScrollView 
             android:layout_width="fill_parent"
@@ -14,8 +15,9 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent" 
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dip"
-                android:layout_marginRight="3dip">
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="#D3D3D3">
     <!-- 大分类的标题：  热书分类 -->
     <LinearLayout
         android:layout_width="fill_parent"
