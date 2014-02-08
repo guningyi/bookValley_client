@@ -110,6 +110,17 @@ public class MainActivity extends Activity {
 	            }
 	    });
 		
+		
+		Button gotoBookClassify = (Button) findViewById(R.id.gotoBookClassify);
+		gotoBookClassify.setOnClickListener(new View.OnClickListener() {
+	        public void onClick(View view) {
+	        	Intent intent = new Intent();
+				intent.setClass(MainActivity.this, BookClassify.class);
+				startActivity(intent);
+				finish();          
+	            }
+	    });
+		
 	}
 
 	@Override

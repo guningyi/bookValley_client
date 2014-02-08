@@ -16,7 +16,7 @@
                 android:layout_height="wrap_content">
         
      <Button android:id="@+id/send" 
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="发送"
         android:textSize="20sp"
@@ -39,7 +39,7 @@
       />
         
      <Button android:id="@+id/register" 
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="注册"
         android:textSize="20sp"
@@ -52,7 +52,7 @@
          android:layout_height="wrap_content"
       />
      <Button android:id="@+id/search" 
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="搜索"
         android:textSize="20sp"
@@ -71,7 +71,7 @@
       />
         
      <Button android:id="@+id/login" 
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登录"
         android:textSize="20sp"
@@ -86,19 +86,29 @@
       />
         
      <Button android:id="@+id/download" 
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="下载"
         android:textSize="20sp"
         android:textColor="#cc1100"
      />
      
-     <Button android:id="@+id/gotoMyBookShelf"
-        android:layout_width="fill_parent"
+     <Button 
+        android:id="@+id/gotoMyBookShelf"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="书架"
         android:textSize="20sp"
         android:textColor="#cc1100"
+         />
+     
+     <Button
+         android:id="@+id/gotoBookClassify"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="图书分类"
+         android:textSize="20sp"
+         android:textColor="#cc1100"
          />
    </LinearLayout>
    </ScrollView>   

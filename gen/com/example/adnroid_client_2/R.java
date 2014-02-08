@@ -37,20 +37,22 @@ public final class R {
         public static final int titlebar_big=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001a;
-        public static final int allApps=0x7f080018;
-        public static final int bookShelf=0x7f080016;
-        public static final int btn_leftTop=0x7f08000e;
-        public static final int btn_rightTop=0x7f080010;
+        public static final int action_settings=0x7f08001d;
+        public static final int allApps=0x7f08001b;
+        public static final int bookShelf=0x7f080019;
+        public static final int btn_leftTop=0x7f080011;
+        public static final int btn_rightTop=0x7f080013;
+        public static final int chuanyue=0x7f08000f;
         public static final int download=0x7f08000c;
         public static final int downloadBookName=0x7f08000b;
-        public static final int file_modify=0x7f080014;
-        public static final int file_name=0x7f080013;
+        public static final int file_modify=0x7f080017;
+        public static final int file_name=0x7f080016;
+        public static final int gotoBookClassify=0x7f08000e;
         public static final int gotoMyBookShelf=0x7f08000d;
-        public static final int head=0x7f080015;
-        public static final int icon=0x7f080012;
-        public static final int imageView1=0x7f080011;
-        public static final int imageViewIcon=0x7f080019;
+        public static final int head=0x7f080018;
+        public static final int icon=0x7f080015;
+        public static final int imageView1=0x7f080014;
+        public static final int imageViewIcon=0x7f08001c;
         public static final int layout=0x7f080000;
         public static final int login=0x7f08000a;
         public static final int passWord=0x7f080004;
@@ -60,17 +62,19 @@ public final class R {
         public static final int search=0x7f080007;
         public static final int searchBookName=0x7f080006;
         public static final int send=0x7f080001;
-        public static final int sliding=0x7f080017;
-        public static final int tv_head=0x7f08000f;
+        public static final int sliding=0x7f08001a;
+        public static final int tv_head=0x7f080012;
         public static final int userName=0x7f080003;
         public static final int userNameLogin=0x7f080008;
+        public static final int xiuzhen=0x7f080010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int head=0x7f030001;
-        public static final int item1=0x7f030002;
-        public static final int local_list_item=0x7f030003;
-        public static final int main=0x7f030004;
+        public static final int book_classify=0x7f030001;
+        public static final int head=0x7f030002;
+        public static final int item1=0x7f030003;
+        public static final int local_list_item=0x7f030004;
+        public static final int main=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f070000;

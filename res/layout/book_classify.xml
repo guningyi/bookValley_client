@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dip"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chuanyue"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:text="穿越风云" />
+
+ 
+        
+        <View  
+    	 android:orientation="vertical"
+    	 android:layout_width="0.5dip"  
+   		 android:layout_height="10dip"  
+   		 android:layout_gravity="center"
+   		 android:layout_margin="3dip"
+   		 android:padding="2dip"
+    	 android:background="?android:attr/listDivider"
+		/>  
+
+        <TextView
+            android:id="@+id/xiuzhen"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:gravity="center"
+            android:padding="2dip"
+            android:text="修正传奇" />
+    </LinearLayout>
+
+</LinearLayout>
