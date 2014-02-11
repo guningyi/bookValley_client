@@ -2,10 +2,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#DCDCDC" >
+    android:orientation="vertical" >
 
-  <include  layout="@layout/group_frame_template" />
-    
-    
+    <!-- 用ScrollView去包住大的分类 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <!-- ScrollView只能包含一个直接的子节点，所以要在这里套一层 -->
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCDCDC"
+            android:orientation="vertical" >
+
+            <include layout="@layout/group_frame_template" />
+
+            <include layout="@layout/group_frame_template" />
+
+            <include layout="@layout/group_frame_template" />
+
+            <include layout="@layout/group_frame_template" />
+
+            <include layout="@layout/group_frame_template" />
+
+            <include layout="@layout/group_frame_template" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
