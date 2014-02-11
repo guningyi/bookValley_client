@@ -29,7 +29,11 @@
         <activity 
             android:name="com.example.adnroid_client_2.BookClassify" >
         </activity>
-            
+        
+        <activity  
+        	android:name="com.example.adnroid_client_2.UserSettingActivity">
+        </activity>  
+           
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 

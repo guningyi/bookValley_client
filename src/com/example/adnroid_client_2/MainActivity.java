@@ -121,6 +121,19 @@ public class MainActivity extends Activity {
 	            }
 	    });
 		
+	
+		Button gotoSetting = (Button) findViewById(R.id.gotoSetting);
+		gotoSetting.setOnClickListener(new View.OnClickListener() {
+	        public void onClick(View view) {
+	        	Intent intent = new Intent();
+				intent.setClass(MainActivity.this, UserSettingActivity.class);
+				startActivity(intent);
+				finish();          
+	            }
+	    });
+	
+		
+		
 	}
 
 	@Override
