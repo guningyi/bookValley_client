@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 这里要预留一个栏目给顶部head -->
+    
+    <!-- 用ScrollView去包住大的分类 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <!-- ScrollView只能包含一个直接的子节点，所以要在这里套一层 -->
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCDCDC"
+            android:orientation="vertical" >
+            
+        <!-- 推荐栏1 -->
+        <include layout="@layout/recommend_group_frame"/>
+        
+        <!-- 广告栏1 -->
+        <include layout="@layout/recommend_adv"/>
+        
+        <!-- 推荐栏2 -->
+        <include layout="@layout/recommend_group_frame"/>
+        
+        <!-- 广告栏 2-->
+        <include layout="@layout/recommend_adv"/>
+        
+        <!-- 推荐栏3 -->
+        <include layout="@layout/recommend_group_frame"/>
+        
+        <!-- 广告栏3 -->
+        <include layout="@layout/recommend_adv"/>
+        
+        <!-- 推荐栏4 -->
+        <include layout="@layout/recommend_group_frame"/>
+        
+        <!-- 广告栏4 -->
+        <include layout="@layout/recommend_adv"/>
+        
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

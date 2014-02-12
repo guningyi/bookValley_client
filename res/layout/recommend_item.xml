@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="3dip"
+    android:orientation="vertical"
+    android:padding="2dip" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:padding="2dip"
+        android:textColor="@color/black"
+        android:text="养生宝典" />
+
+    <TextView
+        android:id="@+id/brief"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:padding="2dip"
+        android:textColor="@color/gray"
+        android:text="日常工作繁忙，节奏快，养生保健很重要，冬天来临，如何保养？" />
+
+</LinearLayout>

@@ -32,7 +32,13 @@
         
         <activity  
         	android:name="com.example.adnroid_client_2.UserSettingActivity">
-        </activity>  
+        </activity>
+          
+        
+        <activity  
+        	android:name="com.example.adnroid_client_2.RecommendActivity">
+        </activity>
+        
            
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

@@ -22,7 +22,15 @@
         android:text="设置"
         android:textSize="20sp"
         android:textColor="#cc1100"
-      />    
+      />  
+      
+     <Button android:id="@+id/gotoRecommend" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐"
+        android:textSize="20sp"
+        android:textColor="#cc1100"
+      /> 
          
      <Button android:id="@+id/send" 
         android:layout_width="wrap_content"

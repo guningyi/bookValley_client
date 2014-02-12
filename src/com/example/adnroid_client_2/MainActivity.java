@@ -131,6 +131,17 @@ public class MainActivity extends Activity {
 				finish();          
 	            }
 	    });
+		
+		Button gotoRecommend = (Button) findViewById(R.id.gotoRecommend);
+		gotoRecommend.setOnClickListener(new View.OnClickListener() {
+	        public void onClick(View view) {
+	        	Intent intent = new Intent();
+				intent.setClass(MainActivity.this, RecommendActivity.class);
+				startActivity(intent);
+				finish();          
+	            }
+	    });
+		
 	
 		
 		
