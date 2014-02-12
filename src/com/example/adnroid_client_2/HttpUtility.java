@@ -27,6 +27,47 @@ public class HttpUtility {
 	{
 		
 	}
+	
+	//I add the load recommend function here
+	public String[] load_recommend(String groupName)
+	{	    
+	    // creating new product in background thread
+		String strUrl = "http://10.0.2.2/bookValley_Server/load_recommend.php";
+		URL url = null;
+		HttpPost httpRequest = new HttpPost(strUrl);
+		List <NameValuePair> params = new ArrayList<NameValuePair>();
+		params.add(new BasicNameValuePair("groupName", groupName));
+		try{
+			httpRequest.setEntity((HttpEntity) new UrlEncodedFormEntity(params,HTTP.UTF_8));
+			HttpResponse httpResponse=new DefaultHttpClient().execute(httpRequest);
+			//若状态码为200 ok 
+		    if(httpResponse.getStatusLine().getStatusCode()==200){
+		        //取出回应字串
+		        result=EntityUtils.toString(httpResponse.getEntity(),"utf-8");
+		     }
+		     else
+		     {
+		         result = "Error Response"+httpResponse.getStatusLine().toString();
+		     }
+			 
+		}catch(ClientProtocolException e)
+		{     
+		    e.printStackTrace();
+		} 
+		catch (UnsupportedEncodingException e)
+		{	    		     
+		    e.printStackTrace();
+		} 
+		catch (IOException e)
+		{     
+		    e.printStackTrace();
+		}
+		String[] results = result.split(" ");
+		return results;
+	}
+	
+	
+	
 	//I add some comments in HttpUtility Class
 	public String[] list_book(String userName)
 	{	    
